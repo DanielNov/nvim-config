@@ -40,3 +40,15 @@ require("mason-lspconfig").setup({
 vim.diagnostic.config({
 	virtual_text = true,
 })
+
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
+	desc = "Go to definition",
+})
+
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {
+	desc = "Go to declaration",
+})
+
+vim.keymap.set("n", "<C-o>", "<C-o>", {
+	desc = "Jump back",
+})
